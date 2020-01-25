@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.showtime{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    background-color: #262626;
+    color: #27ae60;
+    position: relative;
+}
+.backButton{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #27ae60;
+    bottom: 0;
+    right: 20%;
+    color: #262626;
+    border-top-left-radius:15px ;
+    border-top-right-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.showtime h1{
+    text-shadow: 0 0 10px #27ae60;
+}
+.showtime h1::selection , .showtime span::selection{
+    color: #262626;
+}
+#city{
+    font-size: 15px;
+    margin-left: 20px;
+}
+.buttonAria{
+    width: 100%;
+    height: 50vh;
+}
+.boxbutton{
+ background-color: #181515;
+ width: 100%;
+ min-height: 50vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.buttonAria {
+    width: 80%;
+    margin: 0 auto;
+    height: 80%;
+}
+.buttonAria button , .buttonAriacity button{
+    background:none;
+    color: #27ae60;
+    border: 0;
+    margin: 10px;
+    cursor: pointer;
+}
+.buttonAriacity{
+    position: absolute;
+    width: 100%;
+    min-height: 50vh;
+    top: 0;
+    left: 0;
+    background-color: #181515;
+    display: none;
+}
+@media (max-width: 376px) {
+    .showtime{
+        font-size: 20px !important;
+    }
+  }
