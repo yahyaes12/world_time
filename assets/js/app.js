@@ -45,33 +45,33 @@ $(document).ready(function () {
 
 
 /////make Button for continent
-    let chek = ""
-    $.getJSON("http://worldtimeapi.org/api/timezone", (data)=>{
-        for (let i  in data) {
-            let city = data[i].substring(
-                0,
-                data[i].lastIndexOf("/")
-            );
-                let n = data[i].search("/")
-                if(n<0){
-                    city = data[i]
-                }
+    // let chek = ""
+    // $.getJSON("http://worldtimeapi.org/api/timezone", (data)=>{
+    //     for (let i  in data) {
+    //         let city = data[i].substring(
+    //             0,
+    //             data[i].lastIndexOf("/")
+    //         );
+    //             let n = data[i].search("/")
+    //             if(n<0){
+    //                 city = data[i]
+    //             }
                 
                 
-                if(i==1){
-                    chek = city;
-                }
+    //             if(i==1){
+    //                 chek = city;
+    //             }
 
-                if(chek !== city ){
-                    chek = city
-                $(".buttonAria").append(`<button id="continent" name=${city}>${city}</button>`);
-                }
+    //             if(chek !== city ){
+    //                 chek = city
+    //             $(".buttonAria").append(`<button id="continent" name=${city}>${city}</button>`);
+    //             }
            
             
-        }
+    //     }
         
-    }
-    );
+    // }
+    // );
 
     ///make cityButton in continent
     $(".buttonAria").on("click", "button#continent", function(){
@@ -88,7 +88,8 @@ $(document).ready(function () {
             )
             $(".buttonAriacity").append(`<button id="cityButton"  city=${city} continent=${continent}>${city}</button>`);
         }
-        $(".buttonAriacity").fadeIn(); 
+        
+        $(".buttonAriacity").css("display", "flex");
         $(".backButton").css("display", "flex");
         })
     });
